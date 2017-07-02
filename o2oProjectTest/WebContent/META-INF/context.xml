@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Context reloadable = "true">
+<Resource
+	name = "jdbc/rjxt_book"
+	type = "javax.sql.DataSource"
+	maxActive = "4"
+	maxIdle = "2"
+	username="rjxt"
+	password="rjxt@2.com"
+	maxWait = "5000"
+	driverClassName="com.mysql.jdbc.Driver"  
+	url="jdbc:mysql://106.15.44.172:3306/rjxt_book?characterEncoding=UTF-8"
+/>
+
+</Context>
