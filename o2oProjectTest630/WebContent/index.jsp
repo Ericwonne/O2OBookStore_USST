@@ -43,9 +43,7 @@
 
 
 
-
-
-
+            <!-- 
             <nav class="navbar navbar-default navbar-fixed-top bootsnav">
                 <div class="container-fluid">
                     <div class="navbar-header">
@@ -78,40 +76,68 @@
                 </div>
             </nav>
 
+ -->
 
-<!--
 
             <nav class="navbar navbar-default navbar-fixed-top topnav" role="navigation">
-                <div class="container topnav">
-                    <!-- Brand and toggle get grouped for better mobile display -->
-                    <div class="navbar-header navbar-left">
-                        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
-                <span class="sr-only">Toggle navigation</span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-            </button>
-                        <a class="navbar-brand topnav" href="#" style="font-size:20px">上理二手书O2O平台</a>
-                    </div>
-                    <!-- Collect the nav links, forms, and other content for toggling -->
-                    <div class="collapse navbar-collapse navbar-right" id="bs-example-navbar-collapse-1">
-                        <ul class="nav navbar-nav navbar-right">
-                            <li>
-                                <a href="#about" style="font-size:20px">关于</a>
-                            </li>
-                            <li>
-                                <a data-toggle="modal" data-target="#login_admin" href="#services" style="font-size:20px">管理员</a>
-                            </li>
-                            <li>
-                                <a href="#contact" style="font-size:20px">联系我们</a>
-                            </li>
-                        </ul>
-                    </div>
-                    <!-- /.navbar-collapse -->
-                </div>
-                <!-- /.container -->
-            </nav>-->
 
+                <div class="container topnav">
+
+                    <!-- Brand and toggle get grouped for better mobile display -->
+
+                    <div class="navbar-header navbar-left">
+
+                        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+
+                <span class="sr-only">Toggle navigation</span>
+
+                <span class="icon-bar"></span>
+
+                <span class="icon-bar"></span>
+
+                <span class="icon-bar"></span>
+
+            </button>
+
+                        <a class="navbar-brand topnav" href="#" style="font-size:20px">上理二手书O2O平台</a>
+
+                    </div>
+
+                    <!-- Collect the nav links, forms, and other content for toggling -->
+
+                    <div class="collapse navbar-collapse navbar-right" id="bs-example-navbar-collapse-1">
+
+                        <ul class="nav navbar-nav navbar-right">
+
+                            <li>
+
+                                <a href="#about" style="font-size:20px">关于</a>
+
+                            </li>
+
+                            <li>
+
+                                <a data-toggle="modal" data-target="#login_admin" href="#services" style="font-size:20px">管理员</a>
+
+                            </li>
+
+                            <li>
+
+                                <a href="#contact" style="font-size:20px">联系我们</a>
+
+                            </li>
+
+                        </ul>
+
+                    </div>
+
+                    <!-- /.navbar-collapse -->
+
+                </div>
+
+                <!-- /.container -->
+
+            </nav>
 
             <div class="intro-header">
                 <div class="container">

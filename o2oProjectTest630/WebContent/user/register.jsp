@@ -160,7 +160,7 @@
 
 			.forbtn {
 				border-radius: 4px;
-				border-width: 1.5px;
+				border-width: 0.8px;
 				width: 100%;
 				height: 40px;
 				/*align-content: center;
@@ -177,7 +177,7 @@
 			}
 
 			#maining {
-				margin: 10px 350px;
+				margin: 8px 350px;
 				display: flex;
 				align-items: left;
 				padding: 0.5px 0.5px;
@@ -199,16 +199,15 @@
 		<!--<jsp:include page="../header.jsp" flush="true" />-->
 		<hr style="width: auto; color: aquamarine; height: auto; display: block" />
 
-		<div id="div1" class="form-group" style="align-content: center; text-align: center">
-
-			<label style="color: black; font-size: 25px">欢迎注册上理二手书交易网站</label>
+		<div id="div1" style="align-content: center; text-align: center">
+			<label style="text-align: center; font-size:x-large;font-family:'Times New Roman', Times, serif; font-weight:inherit;color:black;">欢迎注册上理二手书交易网站</label>
 		</div>
+
 		<hr style="width: auto; color: aquamarine; height: auto; display: block" />
 		<br />
 		<br />
 
 		<form>
-
 			<div id="maining" class="row">
 				<div class="col-lg-4">
 					<span><label>学号：</label></span> <input class="forbtn" type="text" id="userName" onchange="checkUsername();">
@@ -216,6 +215,16 @@
 				</div>
 				<div class="col-lg-4">
 					<span><label>姓名：</label> </span><input class="forbtn" type="text" id="name"> <label id="checkname" class="alert_star">*</label>
+				</div>
+			</div>
+
+			<div id="maining" class="row">
+				<div class="col-lg-4">
+					<span><label>密码：</label> </span><input class="forbtn" type="text" id="password"> <label id="checkpassword" class="alert_star">*</label>
+				</div>
+				<div class="col-lg-4">
+					<span><label>确认密码：</label> </span><input class="forbtn" type="text" id="confirm_password"> <label id="confirm_password_label"
+					 class="alert_star">*</label>
 				</div>
 			</div>
 
@@ -236,7 +245,7 @@
 				</div>
 
 			</div>
-		
+
 			<div id="maining" class="row" style="align-items:center">
 				<div class="col-lg-4">
 					<span><label>学院：</label></span>
@@ -270,7 +279,7 @@
 					<span><label>QQ：</label></span> <input class="forbtn" type="text" id="qq">
 				</div>
 			</div>
-		
+
 			<div id="maining" class="row">
 				<div class="col-lg-4">
 					<span><label>微信：</label></span> <input class="forbtn" type="text" id="wechat">
@@ -294,12 +303,6 @@
 				</div>
 			</div>
 
-			<div id="maining" class="row">
-				<div class="col-lg-4">
-					<span><label>密码：</label> </span><input class="forbtn" type="text" id="password"> <label id="checkpassword" class="alert_star">*</label>
-				</div>
-			</div>
-		
 			<br />
 			<div id="maining" style="padding:5px 10px;">
 				<button type="submit" class="btn btn-info" style="width:100%;height:40px;">注册</button>

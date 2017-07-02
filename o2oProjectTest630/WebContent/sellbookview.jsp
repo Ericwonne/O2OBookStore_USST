@@ -11,10 +11,6 @@
 		<script src="http://cdn.runoob.com/libs/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 		<title>我要发布卖书信息~</title>
 		<style type="text/css">
-			body {
-				font: 12px/1.5 arial;
-			}
-
 			.disabled {
 				background: #eee;
 			}
@@ -32,7 +28,8 @@
 				margin: auto;
 				max-width: 70%;
 			}
-				#maining {
+
+			#maining {
 				height: 50px;
 				display: flex;
 				align-items: center;
@@ -51,22 +48,22 @@
 	<body>
 		<div>
 			<hr style="width: auto; color: aquamarine; height: auto; display: block" />
-			<h1 style="text-align: center">请填写以下信息完成发布</h1>
+			<p style="text-align: center; font-size:x-large;font-family:'Times New Roman', Times, serif; font-weight:inherit;">请填写以下信息完成卖书发布</p>
 			<hr style="width: auto; color: aquamarine; height: auto; display: block" />
 		</div>
-		<div style="padding: 20px 400px 10px;">
+		<div style="padding: 25px 450px 25px;">
 			<form action="SellBookServlet" method="post" method="get" class="bs-example bs-example-form">
 
-				<div class="input-group"><span class="input-group-addon"> 书名 </span>
+				<div class="input-group"><span class="input-group-addon"> 书&nbsp;&nbsp;名 </span>
 					<input type="text" class="form-control" name="bookname" size="10">
 					<span class="input-group-addon"> ISBN </span>
 					<input type="text" class="form-control" name="isbn" size="10">
 				</div>
 				<br/>
 
-				<div class="input-group"><span class="input-group-addon"> 作者 </span>
+				<div class="input-group"><span class="input-group-addon"> 作&nbsp;&nbsp;者 </span>
 					<input type="text" class="form-control" name="author" size="10">
-					<span class="input-group-addon"> 版本 </span>
+					<span class="input-group-addon"> 版&nbsp;&nbsp;本 </span>
 					<input type="text" class="form-control" name="version" size="10">
 				</div>
 				<br/>
@@ -91,9 +88,9 @@
 					</select>
 				</div>
 				<br/>
-				<div class="input-group"><span class="input-group-addon"> 书籍原价格 </span>
+				<div class="input-group"><span class="input-group-addon"> 原书价格 </span>
 					<input type="text" class="form-control" name="price" size="5">
-					<span class="input-group-addon"> 折扣 </span>
+					<span class="input-group-addon"> 折&nbsp;&nbsp;扣 </span>
 					<input type="text" class="form-control" name="discount" size="5">
 				</div>
 				<br/>
@@ -101,23 +98,15 @@
 
 
 
-				<div class="input-group"><span class="input-group-addon"> 是否是教材 </span>
+				<div class="input-group"><span class="input-group-addon"> 是否教材 </span>
 					<input type="radio" name="if" checked id="yes" value="1">是
 					<input type="radio" name="if" id="no" value="0">否
 				</div>
 				<br/>
 
 
-
-				<div class="input-group"><span class="input-group-addon"> 年级 </span>
-					<select id="grade" class="form-control" name="grade">
-						<option value="">请选择</option>
-						<option value="2011">2011</option>
-						<option value="2012">2012</option>
-						<option value="2013">2013</option>
-						<option value="2014">2014</option>
-					</select>
-					<span class="input-group-addon"> 学院 </span>
+				<div class="input-group">
+					<span class="input-group-addon"> 学&nbsp;&nbsp;院 </span>
 					<select id="department" class="form-control" name="school" onchange="updateMajor();">
 						<option value="">请选择</option>
 						<option value="光电信息与计算机工程学院">光电信息与计算机工程学院</option>
@@ -126,27 +115,35 @@
 						<option value="外语学院">外语学院</option>
 						<option value="管理学院">管理学院</option>
 						<option value="理学院">理学院</option>
-				</select>
+					</select>
+					<span class="input-group-addon"> 专&nbsp;&nbsp;业 </span>
+					<select id="major" class="form-control" name="major">
+						<option value="">请选择</option>
+					</select>
 				</div>
 				<br/>
 
-				<div class="input-group"><span class="input-group-addon"> 专业 </span>
-					<select id="major" class="form-control" name="major">
+				<div class="input-group"><span class="input-group-addon"> 年&nbsp;&nbsp;级 </span>
+					<select id="grade" class="form-control" name="grade">
 						<option value="">请选择</option>
-				</select>
+						<option value="2011">2011</option>
+						<option value="2012">2012</option>
+						<option value="2013">2013</option>
+						<option value="2014">2014</option>
+					</select>
 					<span class="input-group-addon"> 对应课程 </span>
 					<input type="text" class="form-control" id="course_name" name="course_name" size="10">
 				</div>
 				<br/>
 
-				<div class="input-group"><span class="input-group-addon"> 描述 </span>
+
+				<div class="input-group"><span class="input-group-addon"> 描&nbsp;&nbsp;述 </span>
 					<input type="text" class="form-control" name="describe" size="100">
 				</div>
 				<br/>
 				<br/>
-			<div id="maining">
-					<input type="submit" class="btn btn-info col-lg-3" style="color:black" value="提交">
-					&nbsp;&nbsp;&nbsp;&nbsp;
+				<div id="maining">
+					<input type="submit" class="btn btn-info col-lg-3" style="color:black" value="提交"> &nbsp;&nbsp;&nbsp;&nbsp;
 					<input type="reset" class="btn btn-info col-lg-3" style="color:black" value="重填">
 				</div>
 

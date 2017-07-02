@@ -52,16 +52,16 @@
 			<div class="container">
 				<div class="row">
 					<div class="col-md-7">
-						<h1>修改密码</h1>
+						<h1 style="color:black">修改密码</h1>
 						<form>
 							<div class="form-group">
-								<label>请输入您的学号：</label> <input type="text" class="form-control" id="userName">
+								<label style="color:black">请输入您的学号：</label> <input type="text" class="form-control" id="userName">
 							</div>
 							<div class="form-group">
-								<label>请输入您的新密码：</label> <input type="text" class="form-control" id="newPassword">
+								<label style="color:black">请输入您的新密码：</label> <input type="text" class="form-control" id="newPassword">
 							</div>
 							<div class="form-group">
-								<label>请确认密码：</label> <input type="text" class="form-control" id="confirmPassword">
+								<label style="color:black">请确认密码：</label> <input type="text" class="form-control" id="confirmPassword">
 							</div>
 
 							<br />

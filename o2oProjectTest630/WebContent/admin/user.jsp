@@ -8,6 +8,7 @@
 		<link rel="stylesheet" href="http://cdn.static.runoob.com/libs/bootstrap/3.3.7/css/bootstrap.min.css">
 		<script src="http://cdn.static.runoob.com/libs/jquery/2.1.1/jquery.min.js"></script>
 		<script src="http://cdn.static.runoob.com/libs/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
 		<style>
 			.right {
 				position: inherit;
@@ -22,6 +23,9 @@
 	</head>
 
 	<body>
+
+
+
 
 		<div class="container" style="padding: 20px 50px 10px;">
 
@@ -61,7 +65,7 @@
 					</div>
 					<br />
 
-					<div class="input-group"  style="max-width: 50%;">
+					<div class="input-group" style="max-width: 50%;">
 						<span class="input-group-addon"> 学号 </span>
 						<input id="st_num" class="form-control" type="text">
 						<span class="input-group-addon"> 姓名 </span>
@@ -83,44 +87,47 @@
 					<input type="button" class="form-control" style="max-width:50%;" value="搜索" onclick="userSearch()">
 				</fieldset>
 			</form>
-
-
 		</div>
 
-		<br>
+		<br/>
+
 		<div class="container" style="padding: 20px 50px 10px;">
 			<legend>-- 检索结果 --</legend>
 			<p>
-				<span id="userListSpan" style="display: none"> 为您检索到的用户:
-		</p>
-		<table id="userTable" class="table table-hover"
-			style="word-break: keep-all; max-height: 600px;">
-			<thead>
-				<tr>
-					<th>ID</th>
-					<th>学号</th>
-					<th>姓名</th>
-					<th>学院</th>
-					<th>专业</th>
-					<th colspan="1">操作</th>
-				</tr>
-			</thead>
+				<span id="userListSpan" style="display: none"> 为您检索到的用户:</span>
+			</p>
+			<table id="userTable" class="table table-hover table-condensed" style="word-break: keep-all; max-height: 800px;">
+				<thead>
+					<tr>
+						<th>ID</th>
+						<th>学号</th>
+						<th>姓名</th>
+						<th>学院</th>
+						<th>专业</th>
+						<th colspan="1">操作</th>
+					</tr>
+				</thead>
 
-			<tbody id="userList">
+				<tbody id="userList">
 
-			</tbody>
-		</table>
-		<br />
-		<div class="right">
-			<span id="spanPre">上一页</span> &emsp; <span id="spanPageNum"></span>&emsp;
+				</tbody>
+			</table>
+			<br />
+			<div class="right">
+				<span id="spanPre">上一页</span> &emsp; <span id="spanPageNum"></span>&emsp;
 				<span id="spanNext">下一页 </span> &emsp; 共 <span id="spanTotalPage"></span>页
-		</div>
+			</div>
 		</div>
 
 		<br />
 		<br />
 		<br />
 		<br />
+
+
+
+
+
 	</body>
 
 	<script>

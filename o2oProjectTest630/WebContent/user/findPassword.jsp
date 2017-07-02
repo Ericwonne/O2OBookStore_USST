@@ -51,16 +51,16 @@
 			<div class="container">
 				<div class="row">
 					<div class="col-md-7">
-						<h1>找回密码</h1>
+						<h1 style="color:black">找回密码</h1>
 						<form>
 							<div class="form-group">
-								<label>请输入您的学号：</label> <input type="text" class="form-control" id="first">
+								<label style="color:black">请输入您的学号：</label> <input type="text" class="form-control" id="first">
 							</div>
 							<div class="form-group">
-								<label>请输入您的验证问题：</label> <input type="text" class="form-control" id="last">
+								<label style="color:black">请输入您的验证问题：</label> <input type="text" class="form-control" id="last">
 							</div>
 							<div class="form-group">
-								<label>请输入您问题的答案：</label> <input type="text" class="form-control" id="email">
+								<label style="color:black">请输入您问题的答案：</label> <input type="text" class="form-control" id="email">
 							</div>
 
 							<br />
