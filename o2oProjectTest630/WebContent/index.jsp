@@ -78,7 +78,7 @@
 
  -->
 
-
+            <jsp:include page="header.jsp" flush="true" />
             <nav class="navbar navbar-default navbar-fixed-top topnav" role="navigation">
 
                 <div class="container topnav">
