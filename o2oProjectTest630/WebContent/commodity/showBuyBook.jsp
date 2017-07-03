@@ -30,122 +30,141 @@
 
 		<body>
 
-			<div class="row clearfix" style="margin-top:5px;">
-				<div class="col-md-12 column">
-					<div class="panel panel-default">
-						<div class="panel-heading" style="border-width:1px;border-style:solid;background-color:darkslategray">
-							<h4 class="panel-title">
-								<a data-toggle="collapse" data-parent="#accordion" href="#collapseOne" style="text-decoration:underline;color:antiquewhite">
-					点击查看书籍详细信息列表
-				</a>
-							</h4>
-						</div>
-						<div id="collapseOne" class="panel-collapse collapse">
-							<!--<div id="collapseOne" class="panel-collapse collapse in"> LIKE THIS ONE ADDED IN WILL FAIL-->
-							<div class="panel-body">
-								<table class="table table-hover" style="margin:0.2px 2px;font-size:7px;">
-									<thead>
-										<tr>
-											<th>ISBN：</th>
-											<th>书名：</th>
-											<th>作者：</th>
-											<th>出版社：</th>
-											<th>版本：</th>
-											<th>预期新旧程度：</th>
-											<th>是否教材：</th>
-											<th>预期折扣：</th>
-											<th>描述：</th>
-											<th>适用课程：</th>
-											<th>适用年级：</th>
-											<th>适用专业：</th>
-											<th>适用学院：</th>
-											<th>标签：</th>
-											<th>发布者学号：</th>
-											<th>发布者姓名：</th>
-											<th>发布时间：</th>
 
-										</tr>
-									</thead>
-									<tbody>
-										<tr>
-											<td>${book.isbn }</td>
-											<td><a href="ShowBookServlet?id=${book.id }&type=buy">${book.name }</a></td>
-											<td>${book.author }</td>
-											<td>${book.expect_age }<span>%</span></td>
-											<td>${book.publish }</td>
-											<td>${book.version }</td>
-											<td>${book.if_course }</td>
-											<td>${book.expect_discount}折</td>
-											<td>${book.describe }</td>
-											<td>${book.course_name }</td>
-											<td>${book.grade }</td>
-											<td>${book.major }</td>
-											<td>${book.school }</td>
-											<td>${book.tag }</td>
-											<td>${book.st_num }</td>
-											<td><a href="ShowUserInfoServlet?st_num=${book.st_num }">${book.userName }</a></td>
-											<td>${book.release_time }</td>
-										</tr>
-									</tbody>
-								</table>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
 
-			<div style="margin-left:auto;margin-right:auto;margin-top:20;border-width:1px;border-top-style:dotted;border-bottom-style:dotted;">
-				<div class="container jumbotron">
+			<div style="padding:15px 30px;">
+				<div class="container jumbotron" style="padding:15px 30px;border-style:dotted;border-width:0.5px;border-color:blue;">
 					<div class="row clearfix">
 						<div class="col-lg-6 column">
-							<div class="row">
+							<div class="row" style="padding:15px 30px;border-style:dotted;border-width:0.5px;border-color:blue;border:none">
+								<header style="background-color:aquamarine;color:black;width:100%;margin:0%;font-family:Arial, Helvetica, sans-serif">&nbsp;&nbsp;图书样图</header>
 								<div class="col-lg-5" style="width:100%;height:100%">
 									<div>
-										<img alt="300x200" class="img-responsive" style="width:90%;height:90%;border-style:groove;" src="../image/12.jpg" />
+										<img alt="300x200" class="img-responsive" style="width:90%;height:100%;border-style:groove;" src="../image/12.jpg" />
 										<div class="caption">
+											<header style="background-color:aquamarine;color:black;width:100%;margin-top:10px;font-family:Arial, Helvetica, sans-serif">&nbsp;&nbsp;图书特点</header>
+											<p style="margin-top:10px;">
+												<label style="text-align:right">全新版大学英语</label><br/> 来自XXX，是当代学生的必备教材。
 											</p>
-											<label style="text-align:right">全新版大学英语</label><br/> 来自XXX，是当代学生的必备教材。
-											</p>
-
 										</div>
 									</div>
 								</div>
 							</div>
 						</div>
 						<div class="col-lg-6 column">
-							<div>
-								<p>
-
-									书籍价格：
-
-
-									<h2>100元.</h2>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a class="btn" href="javascript:void(0);">更多</a>
-								</p>
-
-								<p>
-
-									书籍价格：
-
-
-									<h2>100元</h2>.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a class="btn" href="javascript:void(0);">更多</a>
-								</p>
-								<p>
-									<h2>
-										联系卖家：
-									</h2>
-
-									15316831783.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a class="btn" href="javascript:void(0);">更多</a>
+							<div style="padding:15px 30px;border-style:dotted;border-width:0.5px;border-color:blue;border:none">
+								<header style="background-color:aquamarine;color:black;width:100%;margin:0%;font-family:Arial, Helvetica, sans-serif">&nbsp;&nbsp;图书基本信息</header>
+								<div style="font-size:75%;margin-top:10px;">
+									书籍价格：<br/>
+									<font size="6" style="font-weight:lighter" face="arial" color="black">100元.</font>
+								</div>
+								<br/>
+								<div style="font-size:50%">
+									书籍折扣：<br/>
+									<font size="6" style="font-weight:lighter" face="arial" color="black">7.0折.</font>（原书籍价格：150元）
+								</div>
+								<br/>
+								<div style="font-size:50%">
+									联系卖家：<br/>
+									<font size="6" style="font-weight:lighter" face="arial" color="black">15316831783.</font><a class="add-on" href="">点击查看卖家详细信息</a>
+								</div>
+							</div>
+							<br/><br/>
+							<div style="margin-top:20px">
+								<p style="text-align: center">
+									<a class="btn btn-info" style="font-size:100%;color:black;text-align:center" href="">添加到我的收藏</a>
 								</p>
 							</div>
 						</div>
 					</div>
-					<div style="margin-top:60px">
-						<fieldset>
-							<legend>
-								书籍描述
-							</legend>
-							块元素是一个元素，占用了全宽，前后都是换行符。<a class="btn" href="javascript:void(0);">查看详情</a>
-						</fieldset>
+
+					<div style="margin-top:25px;padding-top:20px;">
+						<header style="background-color:aquamarine;color:black;width:100%;margin:0%;font-family:Arial, Helvetica, sans-serif">&nbsp;&nbsp;更多信息</header>
+						<div class="row clearfix" style="margin-top:5px;">
+							<div class="col-md-12 column">
+								<div class="panel panel-default">
+									<div class="panel-heading" style="border-width:1px;border-style:solid;background-color:grey">
+										<h4 class="panel-title">
+											<a data-toggle="collapse" data-parent="#accordion" href="#collapseOne" style="text-decoration:underline;color:antiquewhite;font-weight:lighter">
+					点击查看书籍详细信息列表
+				</a>
+										</h4>
+									</div>
+									<div id="collapseOne" class="panel-collapse collapse">
+										<!--<div id="collapseOne" class="panel-collapse collapse in"> LIKE THIS ONE ADDED IN WILL FAIL-->
+										<div class="panel-body">
+											<table class="table table-hover" style="margin:2px 2px;font-size:8px;padding:5px">
+												<thead>
+													<tr>
+														<th>ISBN：</th>
+														<th>书名：</th>
+														<th>作者：</th>
+														<th>出版社：</th>
+													</tr>
+												</thead>
+												<tbody>
+													<tr>
+														<td>${book.isbn }</td>
+														<td><a href="ShowBookServlet?id=${book.id }&type=buy">${book.name }</a></td>
+														<td>${book.author }</td>
+														<td>${book.expect_age }<span>%</span></td>
+													</tr>
+												</tbody>
+
+												<thead>
+													<th>版本：</th>
+													<th>预期新旧程度：</th>
+													<th>是否教材：</th>
+													<th>预期折扣：</th>
+
+
+												</thead>
+												<tbody>
+													<td>${book.publish }</td>
+													<td>${book.version }</td>
+													<td>${book.if_course }</td>
+													<td>${book.expect_discount}折</td>
+												</tbody>
+
+												<thead>
+													<th>描述：</th>
+													<th>适用课程：</th>
+													<th>适用年级：</th>
+													<th>适用专业：</th>
+												</thead>
+												<tbody>
+													<td>${book.describe }</td>
+													<td>${book.course_name }</td>
+													<td>${book.grade }</td>
+													<td>${book.major }</td>
+												</tbody>
+
+												<thead>
+													<th>适用学院：</th>
+													<th>标签：</th>
+													<th>发布者学号：</th>
+													<th>发布者姓名：</th>
+												</thead>
+
+												<tbody>
+													<td>${book.school }</td>
+													<td>${book.tag }</td>
+													<td>${book.st_num }</td>
+													<td><a href="ShowUserInfoServlet?st_num=${book.st_num }">${book.userName }</a></td>
+												</tbody>
+
+												<thead>
+													<th>发布时间：</th>
+												</thead>
+												<tbody>
+													<td>${book.release_time }</td>
+												</tbody>
+											</table>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
 					</div>
 				</div>
 			</div>
