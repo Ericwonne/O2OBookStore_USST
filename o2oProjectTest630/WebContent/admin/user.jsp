@@ -6,9 +6,17 @@
 	<head>
 		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 		<link rel="stylesheet" href="http://cdn.static.runoob.com/libs/bootstrap/3.3.7/css/bootstrap.min.css">
+		<link rel="stylesheet" href="../css/bootstrap-table.min.css">
 		<script src="http://cdn.static.runoob.com/libs/jquery/2.1.1/jquery.min.js"></script>
 		<script src="http://cdn.static.runoob.com/libs/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-
+		<!--<script src="https://cdn.bootcss.com/bootstrap-table/1.11.1/bootstrap-table-locale-all.min.js"></script>-->
+		<script src="../js/jquery.min.js"></script>
+		<script src="js/bootstrap.min.js"></script>
+		<!--<script src="assets/bootstrap2.3/js/bootstrap.min.js"></script>-->
+		<script src="../js/tableExport.js"></script>
+		<script src="../js/jquery.base64.js"></script>
+		<script src="../js/bootstrap-table.js"></script>
+		<script src="../js/bootstrap-table-export.js"></script>
 		<style>
 			.right {
 				position: inherit;
@@ -96,7 +104,7 @@
 			<p>
 				<span id="userListSpan" style="display: none"> 为您检索到的用户:</span>
 			</p>
-			<table id="userTable" class="table table-hover table-condensed" style="word-break: keep-all; max-height: 800px;">
+			<table id="userTable" data-toggle="table" data-search="true" class="table table-hover table-condensed" style="word-break: keep-all; max-height: 800px;">
 				<thead>
 					<tr>
 						<th>ID</th>
@@ -124,9 +132,63 @@
 		<br />
 		<br />
 
+		 <table id="table" data-toggle="table"
+        data-search="true">
+        <thead>
+            <tr>
+                <th data-field="name">Name</th>
+                <th data-field="stargazers_count">Stars</th>
+                <th data-field="forks_count">Forks</th>
+                <th data-field="description">Description</th>
+            </tr>
+        </thead>
+         <tbody>
+                <tr>
+                    <td>Tanmay</td>
+                    <td>Bangalore</td>
+                    <td>560009</td>
+                    <td>Tanmay</td>
+                </tr>
+                <tr>
+                    <td>Tanmay</td>
+                    <td>Bangalore</td>
+                    <td>560001</td>
+                    <td>Tanmay</td>
+                </tr>
+                <tr>
+                    <td>Tanmay</td>
+                    <td>Bangalore</td>
+                    <td>560001</td>
+                    <td>Tanmay</td>
+                </tr>
+                <tr>
+                    <td>Tanmay</td>
+                    <td>Bangalore</td>
+                    <td>560001</td>
+                    <td>Tanmay</td>
+                </tr>
+                <tr>
+                    <td>Tanmay</td>
+                    <td>Bangalore</td>
+                    <td>560001</td>
+                    <td>Tanmay</td>
+                </tr>
+            </tbody>
+    </table>
+	
 
 
+		<!--<script>
+			$(function () {
+				var $table = $('#userTable');
 
+				$table.on('post-body.bs.userTable', function () {
+					var $search = $table.data('bootstrap.userTable')
+						.$toolbar.find('.search input');
+					$search.attr('placeholder', 'Custom search placeholder');
+				});
+			});
+		</script>-->
 
 	</body>
 
@@ -219,6 +281,7 @@
 			}
 			total = responseXML.getElementsByTagName("total")[0].firstChild.nodeValue;
 			var users = responseXML.getElementsByTagName("user");
+
 			for (var i = 0; i < parseInt(total); i++) {
 				var user = users[i];
 				var row = document.createElement("tr");
@@ -237,6 +300,7 @@
 				//添加并设置每行中的"管理"按钮
 				var manageButton = document.createElement("input");
 				manageButton.setAttribute("type", "button");
+				manageButton.setAttribute("style","text-decoration:underline;color:blue;border:none;background:inherit;")
 				manageButton.setAttribute("value", "管理");
 				manageButton.onclick = function () {
 					window.location.href = "../adminLogin";
@@ -247,9 +311,9 @@
 				row.appendChild(cell);
 				document.getElementById("userList").appendChild(row);
 			}
+
 			document.getElementById("userListSpan").style.display = "";
 			paging();
-
 		}
 
 		//创建一行中的每个td元素
