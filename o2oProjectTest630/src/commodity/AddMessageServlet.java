@@ -36,6 +36,7 @@ public class AddMessageServlet extends HttpServlet {
 		String recordId = request.getParameter("recordId");
 		String type = request.getParameter("type");
 		String content = request.getParameter("content");
+		content = new String(content.getBytes("iso-8859-1"), "UTF-8");
 		String if_private = request.getParameter("if_private");
 		Date now = new Date(); 
 		SimpleDateFormat dateFormat = new SimpleDateFormat("yyyy/MM/dd HH:mm:ss");

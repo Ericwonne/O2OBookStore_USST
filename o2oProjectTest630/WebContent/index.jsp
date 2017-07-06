@@ -1,27 +1,22 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
-    <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
-    <html>
-
-    <head>
-        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <link rel="stylesheet" href="http://www.htmleaf.com/templets/default/css/common.css">
-        <link rel="stylesheet" href="http://cdn.static.runoob.com/libs/bootstrap/3.3.7/css/bootstrap.min.css">
-        <link rel="stylesheet" href="css/style.css">
-        <script src="http://cdn.static.runoob.com/libs/jquery/2.1.1/jquery.min.js"></script>
-        <script src="http://cdn.static.runoob.com/libs/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-        <style>
-            body {
-                background: url(../image/bg.jpg) no-repeat;
-                background-size: cover;
-                font-size: 16px;
-            }
-        </style>
-        <title>上理二手书O2O平台</title>
-    </head>
-
-    <body>
-        <%
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+  <link rel="stylesheet" href="http://cdn.static.runoob.com/libs/bootstrap/3.3.7/css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/style.css">
+  <script src="http://cdn.static.runoob.com/libs/jquery/2.1.1/jquery.min.js"></script>
+  <script src="http://cdn.static.runoob.com/libs/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <style>
+  	a{
+  		font-size:20px;
+  	}
+  </style>
+  <title>上理二手书O2O平台</title>
+</head>
+<body>
+<%
 		Cookie[] cookies = request.getCookies();
 		Cookie cookie = null;
 		String value1 ="";
@@ -35,147 +30,102 @@
 				if(cookie.getName().equals("password")){
 					value2 = cookie.getValue();
 				}
-				
 			}
 		}
 		
 	%>
-
-
-
-            <!-- 
-            <nav class="navbar navbar-default navbar-fixed-top bootsnav">
-                <div class="container-fluid">
-                    <div class="navbar-header">
-                        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-menu">
-                        <i class="fa fa-bars"></i>
-                        </button>
-                        <a class="navbar-brand-mc" href="http://www.htmleaf.com/"><img src="http://www.htmleaf.com/images/logo.svg" class="logo" alt="jQuery之家-自由分享jQuery、html5、css3的插件库"></a>
+<nav class="navbar navbar-default navbar-fixed-top topnav" role="navigation">
+    <div class="container topnav">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="nav navbar-nav navbar-left">
+        <ul class="nav navbar-nav navbar-left">
+          <li>
+        	<a href="#" class="glyphicon glyphicon-book"style="font-size:24px;font-family: "Source Sans Pro", Arial, sans-serif;">
+          	上理二手书O2O平台</a>
+          </li>
+        </div>
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse navbar-right">
+            <ul class="nav navbar-nav navbar-right">
+                <li>
+                    <a href="#about">关于</a>
+                </li>
+                <li>
+                    <a data-toggle="modal" data-target="#login_admin">管理员</a>
+                </li>
+                <li>
+                    <a href="#contact">联系我们</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+<div class="intro-header" style="background-image: url(image/material/index_bg.jpg);">
+    <div class="container">
+        <div class="row">
+        <div class="col-lg-3"></div>
+        <div class="col-lg-6 text-center"><br/><br /><br /><br/><br /><br /><br/><br /><br /><br/><br/>
+            <div class="signup-header wow fadeInUp">
+            <h1 class="form-title text-center" style="color:#FFFFFF">
+                	知识不因被使用而失去价值
+                </h1>
+                <hr class="intro-divider">
+                <br /><br />
+                <form class="form-header" action="LoginServlet" role="form" method="post">
+                    <input type="hidden" name="u" value="503bdae81fde8612ff4944435">
+                    <input type="hidden" name="id" value="bfdba52708">
+                    <div class="form-group">
+                        <input class="form-control input-lg" name="username" type="text" placeholder="学号" required>
+                    </div><br>
+                    <div class="form-group">
+                        <input class="form-control input-lg" name="password" type="password" placeholder="密码" required>
+                    </div><br/><br/>
+                    <div class="form-group">
+                        <input type="submit" class="btn-info btn-block btn-lg" value="登录">
                     </div>
-                    <div class="collapse navbar-collapse" id="navbar-menu">
-                        <ul class="nav navbar-nav navbar-right nav-actions">
-                            <li><a href="http://weibo.com/jqueryzhijia" data-toggle="tooltip" data-placement="bottom" title="关注jQuery之家的新浪微博"
-                                    target="_blank"> <i class="fa fa-weibo"></i> <span class="hidden-md hidden-lg" style="font-size: 0.6em;">关注新浪微博</span></a></li>
-                            <li><a href="http://koubei.baidu.com/s/htmleaf.com" data-toggle="tooltip" data-placement="bottom"
-                                    title="请为jQuery之家在百度口碑上点个赞吧！" target="_blank"> <i class="fa fa-paw"></i> <span class="hidden-md hidden-lg" style="font-size: 0.6em;">百度口碑</span></a></li>
-                            <li><a href="http://www.htmleaf.com/about/Contact_Us.html" data-toggle="tooltip" data-placement="bottom"
-                                    title="联系我们"> <i class="fa fa-envelope-o"></i> <span class="hidden-md hidden-lg" style="font-size: 0.6em;">联系我们</span></a></li>
-                        </ul>
-                        <form name="formsearch" action="http://www.htmleaf.com/plus/search.php" rel="nofollow" id="global_search_form" method="post"
-                            class="navbar-form-mc navbar-right" role="search">
-                            <div class="input-group input-group-nav">
-                                <input type="text" name="q" autocomplete="off" id="input-search" class="form-control" placeholder="搜索从这里开始..." maxlength="60">
-                                <span class="input-group-btn">
-	<a role="button" class="btn" aria-label="search button" id="search-btn">
-	<span class="glyphicon glyphicon-search" aria-hidden="true"></span>
-                                </a>
-                                </span>
-                            </div>
-                        </form>
-                    </div>
+                    <br/>
+                    <p class="privacy text-center" style="font-size:20px;text-align:center;">
+                    	<a href="user/findPassword.jsp" style="font-weight:bold">忘记密码</a>
+                    	或是还没有账号？马上 <a href="user/register.jsp"style="font-weight:bold">注册</a>
+                    </p>
+                </form>
+            </div><br /><br/><br/><br/><br /><br />
+        </div>
+        <div class="col-lg-3"></div>
+        </div>
+    </div>
+</div>
+
+<div id="login_admin" class="modal fade">
+        <div class="modal-dialog " style="width: 400px;">
+            <div class="modal-content">
+                <div class="modal-body">
+                    <button class="close" data-dismiss="modal">
+                        <span>&times;</span>
+                    </button>
                 </div>
-            </nav>
-
- -->
-
-            <jsp:include page="header.jsp" flush="true" />
-            <nav class="navbar navbar-default navbar-fixed-top topnav" role="navigation">
-
-                <div class="container topnav">
-
-                    <!-- Brand and toggle get grouped for better mobile display -->
-
-                    <div class="navbar-header navbar-left">
-
-                        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
-
-                <span class="sr-only">Toggle navigation</span>
-
-                <span class="icon-bar"></span>
-
-                <span class="icon-bar"></span>
-
-                <span class="icon-bar"></span>
-
-            </button>
-
-                        <a class="navbar-brand topnav" href="#" style="font-size:20px">上理二手书O2O平台</a>
-
-                    </div>
-
-                    <!-- Collect the nav links, forms, and other content for toggling -->
-
-                    <div class="collapse navbar-collapse navbar-right" id="bs-example-navbar-collapse-1">
-
-                        <ul class="nav navbar-nav navbar-right">
-
-                            <li>
-
-                                <a href="#about" style="font-size:20px">关于</a>
-
-                            </li>
-
-                            <li>
-
-                                <a data-toggle="modal" data-target="#login_admin" href="#services" style="font-size:20px">管理员</a>
-
-                            </li>
-
-                            <li>
-
-                                <a href="#contact" style="font-size:20px">联系我们</a>
-
-                            </li>
-
-                        </ul>
-
-                    </div>
-
-                    <!-- /.navbar-collapse -->
-
+                <div class="modal-title">
+                    <h2 class="text-center">管理员登录</h2>
                 </div>
-
-                <!-- /.container -->
-
-            </nav>
-
-            <div class="intro-header">
-                <div class="container">
-                    <div class="row">
-                        <br/><br/><br/>
-                        <br/><br/><br/>
-                        <div class="col-lg-7">
-
+                <div class="modal-body">
+                    <form class="form-group" action="/admin/admin_land" method="post">
+                        <div class="form-group">
+                            <label for="admin_num">账号</label>
+                            <input class="form-control" type="text" id="account" onblur="accountBlur()">
                         </div>
-                        <div class="col-md-5">
-                            <div class="signup-header wow fadeInUp">
-                                <h2 class="form-title text-center">加入我们</h2>
-                                <br/>
-                                <form class="form-header" action="http://moxdesign.us10.list-manage.com/subscribe/post" role="form" method="POST" id="#">
-                                    <input type="hidden" name="u" value="503bdae81fde8612ff4944435">
-                                    <input type="hidden" name="id" value="bfdba52708">
-                                    <div class="form-group">
-                                        <input class="form-control input-lg" name="username" type="text" placeholder="学号" required>
-                                    </div><br>
-                                    <div class="form-group">
-                                        <input class="form-control input-lg" name="password" type="password" placeholder="密码" required>
-                                    </div><br/>
-                                    <div class="form-group last">
-                                        <input type="submit" class="btn btn-warning btn-block btn-lg" value="登录">
-                                    </div>
-                                    <br/>
-                                    <br/>
-                                    <p class="privacy text-center" style="font-size:16px;text-align:right;">还没有账号？马上 <a href="user/register.jsp">注册</a>或是<a href="user/findPassword.jsp">忘记密码</a></p>
-                                </form>
-                            </div>
+                        <div class="form-group">
+                            <label for="admin_passwd">密码</label>
+                            <input class="form-control" type="password" id="passwd"  onblur="passwdBlur()">
                         </div>
-                    </div>
-
+                        <div class="text-right">
+                            <button class="btn btn-primary" type="submit" onclick="login()">登录</button>
+                            <button class="btn btn-danger" data-dismiss="modal">取消</button>
+                        </div>
+                         </form>
                 </div>
             </div>
-
-
-            <jsp:include page="footer.jsp" flush="true" />
-    </body>
-
-    </html>
+        </div>
+    </div>
+<jsp:include page="footer.jsp" flush="true" />
+</body>
+</html>

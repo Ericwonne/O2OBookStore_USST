@@ -181,4 +181,34 @@ public class UserDao extends BaseDao {
 		return list;
 	}
 	
+	public User getUserById(String id) {
+		// TODO Auto-generated method stub
+		String sql = "select * from user  where id=?";
+		try(Connection conn = dataSource.getConnection();
+			PreparedStatement pstmt = conn.prepareStatement(sql)){
+			pstmt.setString(1, id);
+			ResultSet rs = pstmt.executeQuery();
+			if(rs.next()){
+				User user = new User();
+				user.setId(rs.getInt("id"));
+				user.setEmail(rs.getString("email"));
+				user.setGrade(rs.getString("grade"));
+				user.setMajor(rs.getString("major"));
+				user.setName(rs.getString("name"));
+				user.setPhone(rs.getString("phone"));
+				user.setQq(rs.getString("qq"));
+				user.setSchool(rs.getString("school"));
+				user.setSex(rs.getString("sex"));
+				user.setSt_num(rs.getString("st_num"));
+				user.setWechat(rs.getString("wechat"));
+				return user;
+			}
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		return null;
+	}
+
+	
 }

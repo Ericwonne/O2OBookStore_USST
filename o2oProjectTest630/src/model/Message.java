@@ -69,4 +69,22 @@ public class Message {
 		this.senderSt_num = senderSt_num;
 	}
 	
+	
+	private int if_sale;
+	public int getIf_sale() {
+		return if_sale;
+	}
+	public void setIf_sale(int if_sale) {
+		this.if_sale = if_sale;
+	}
+	public int getIf_private() {
+		return if_private;
+	}
+	public void setIf_private(int if_private) {
+		this.if_private = if_private;
+	}
+
+
+	private int if_private;
+
 }

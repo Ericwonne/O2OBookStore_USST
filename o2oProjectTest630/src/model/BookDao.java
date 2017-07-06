@@ -19,7 +19,7 @@ public class BookDao extends BaseDao {
 				pstmt.setString(4,buybook.getPublish());
 				pstmt.setString(5,buybook.getAuthor());
 				pstmt.setFloat(6,buybook.getExpect_age());
-				pstmt.setInt(7,Integer.parseInt(buybook.getIf_course()));
+				pstmt.setInt(7,buybook.getIf_course());
 				pstmt.setString(8,buybook.getCourse_name());
 				pstmt.setString(9,buybook.getGrade());
 				pstmt.setString(10,buybook.getSchool());
@@ -57,7 +57,7 @@ public class BookDao extends BaseDao {
 				pstmt.setString(4,sellbook.getPublish());
 				pstmt.setFloat(5,sellbook.getAge());
 				pstmt.setString(6,sellbook.getAuthor());
-				pstmt.setInt(7,Integer.parseInt(sellbook.getIf_course()));
+				pstmt.setInt(7,sellbook.getIf_course());
 				pstmt.setString(8,sellbook.getCourse_name());
 				pstmt.setString(9,sellbook.getGrade());
 				pstmt.setString(10,sellbook.getSchool());
@@ -80,22 +80,22 @@ public class BookDao extends BaseDao {
 			return false;
 		}
 		
-	
+	}
+	public boolean updateBookBySql(String sql){
+		try {
+			Connection conn=dataSource.getConnection();
+			PreparedStatement pstmt=conn.prepareStatement(sql);
+			{
+				pstmt.executeUpdate();
+				conn.close();
+				return true;
+			}
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+			return false;
+		}
 		
 	}
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
+
 }

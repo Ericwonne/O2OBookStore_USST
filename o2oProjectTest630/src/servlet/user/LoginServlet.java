@@ -58,7 +58,7 @@ public class LoginServlet extends HttpServlet {
 			User user = userDao.getUserByStNum(username);
 			session.setAttribute("loginUser", user);
 			session.setAttribute("isLogin", true);
-			request.getRequestDispatcher("mainPage.jsp").forward(request, response);
+			response.sendRedirect("MainPageRecommendServlet");;
 		}
 		
 	}

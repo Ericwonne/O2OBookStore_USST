@@ -88,7 +88,7 @@ public class SellBookServlet extends HttpServlet {
 		sellbook.setTag(tag);
 		sellbook.setDiscount(discount);
 	
-		sellbook.setIf_course(if0+"");
+		sellbook.setIf_course(if0);
 		sellbook.setGrade(grade);
 		sellbook.setCourse_name(course_name);
 		sellbook.setMajor(major);

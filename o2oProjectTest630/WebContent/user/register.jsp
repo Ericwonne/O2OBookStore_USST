@@ -196,7 +196,6 @@
 	</head>
 
 	<body>
-		<!--<jsp:include page="../header.jsp" flush="true" />-->
 		<hr style="width: auto; color: aquamarine; height: auto; display: block" />
 
 		<div id="div1" style="align-content: center; text-align: center">

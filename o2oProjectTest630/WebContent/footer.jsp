@@ -4,7 +4,7 @@
 	<html>
 
 	<head>
-		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 		<link rel="stylesheet" href="http://cdn.static.runoob.com/libs/bootstrap/3.3.7/css/bootstrap.min.css">
 		<link rel="stylesheet" href="css/style.css">
 		<script src="http://cdn.static.runoob.com/libs/jquery/2.1.1/jquery.min.js"></script>
@@ -14,7 +14,8 @@
 	<body>
 		<div id="footer">
 			<div class="container">
-				<p class="text-muted credit" align="right">©Developed By 软件协同设计课程2组 | All rights reserved. </p>
+			<br/>
+				<p class="text-muted credit" align="center" style="font-size:16px">©Developed By 软件协同设计课程2组 | All rights reserved. </p>
 			</div>
 		</div>
 	</body>

@@ -9,7 +9,7 @@ public class SellBook {
 	private String imageurl;	
 	private float age;	
 	private String author;	
-	private String if_course;	
+	private int if_course;	
 	private String course_name;	
 	private String grade;	
 	private String school;	
@@ -105,10 +105,10 @@ public class SellBook {
 		this.author = author;
 	}
 	
-	public String getIf_course() {
+	public int getIf_course() {
 		return if_course;
 	}
-	public void setIf_course(String if_course) {
+	public void setIf_course(int if_course) {
 		this.if_course = if_course;
 	}
 	public String getCourse_name() {

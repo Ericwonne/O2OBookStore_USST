@@ -38,7 +38,6 @@
 	</head>
 
 	<body>
-		<jsp:include page="../header.jsp" flush="true" />
 		<hr style="width: auto; color: aquamarine; height: auto; display: block" />
 
 		<!--<div class="header">

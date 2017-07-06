@@ -36,15 +36,16 @@ public class SearchServlet extends HttpServlet {
 	protected void doGet(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
 		request.setCharacterEncoding("UTF-8");
-		// 定义四个分页会用到的变量
+		response.setContentType("text/html;charset=UTF-8");
+		// 瀹氫箟鍥涗釜鍒嗛〉浼氱敤鍒扮殑鍙橀噺
 		int pageSize = 3;
-		int pageNow = 1;// 默认显示第一页
-		int rowCount = 0;// 该值从数据库中查询
-		int pageCount = 0;// 该值是通过pageSize和rowCount
-		// 接受用户希望显示的页数（pageNow）
+		int pageNow = 1;// 榛樿鏄剧ず绗竴椤�
+		int rowCount = 0;// 璇ュ�间粠鏁版嵁搴撲腑鏌ヨ
+		int pageCount = 0;// 璇ュ�兼槸閫氳繃pageSize鍜宺owCount
+		// 鎺ュ彈鐢ㄦ埛甯屾湜鏄剧ず鐨勯〉鏁帮紙pageNow锛�
 		String s_pageNow = request.getParameter("pageNow");
 		if (s_pageNow != null) {
-			// 接收到了pageNow
+			// 鎺ユ敹鍒颁簡pageNow
 			pageNow = Integer.parseInt(s_pageNow);
 		}
 		String searchType = request.getParameter("searchType");
@@ -57,18 +58,20 @@ public class SearchServlet extends HttpServlet {
 		if (bookType.equals("buy")) {
 			BuyBookDao buyBookDao = new BuyBookDao();
 			rowCount = buyBookDao.calRowCount(searchType, searchContent);
-			//计算页数
+			System.out.println("rowcount"+rowCount);
+			//璁＄畻椤垫暟
 			if(rowCount%pageSize==0)
 				pageCount = rowCount/pageSize;	
 			else pageCount = rowCount/pageSize+1;
 			request.setAttribute("pageCount", pageCount);
 			ArrayList<BuyBook> books = buyBookDao.findBooks(searchType, searchContent,pageNow,pageSize);
+			System.out.println("lenbooks"+books.size());
 			request.setAttribute("books", books);
 			request.getRequestDispatcher("search/buyBookSearchResult.jsp").forward(request, response);
 		} else if (bookType.equals("sale")) {
 			SellBookDao sellBookDao = new SellBookDao();
 			rowCount = sellBookDao.calRowCount(searchType, searchContent);
-			//计算页数
+			//璁＄畻椤垫暟
 			if(rowCount%pageSize==0)
 				pageCount = rowCount/pageSize;	
 			else pageCount = rowCount/pageSize+1;

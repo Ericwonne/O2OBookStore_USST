@@ -87,7 +87,7 @@ public class BuyBookServlet extends HttpServlet {
 		buybook.setTag(tag);
 		buybook.setExpect_discount(expect_discount);
 	
-		buybook.setIf_course(if0+"");
+		buybook.setIf_course(if0);
 		buybook.setGrade(grade);
 		buybook.setCourse_name(course_name);
 		buybook.setMajor(major);

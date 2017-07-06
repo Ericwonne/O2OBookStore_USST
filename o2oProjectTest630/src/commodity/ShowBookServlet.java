@@ -40,6 +40,7 @@ public class ShowBookServlet extends HttpServlet {
 		if(type.equals("buy")){
 			BuyBookDao buyBookDao = new BuyBookDao();
 			BuyBook buyBook = buyBookDao.getBuyBookById(Integer.parseInt(id));
+			buyBookDao.addGlances(Integer.parseInt(id));
 			MessageDao messageDao = new MessageDao();
 			ArrayList<Message> messages = messageDao.getMessageByBookId(Integer.parseInt(id),0);
 			request.setAttribute("book",buyBook);
@@ -48,6 +49,7 @@ public class ShowBookServlet extends HttpServlet {
 		}else if(type.equals("sell")){
 			SellBookDao sellBookDao = new SellBookDao();
 			SellBook sellBook = sellBookDao.getSellBookById(Integer.parseInt(id));
+			sellBookDao.addGlances(Integer.parseInt(id));
 			MessageDao messageDao = new MessageDao();
 			ArrayList<Message> messages = messageDao.getMessageByBookId(Integer.parseInt(id),1);
 			request.setAttribute("messages", messages);

@@ -82,8 +82,8 @@
 										<div id="collapseOne" class="panel-collapse collapse" style="font-size:inherit;">
 											<div class="panel-body">
 												<!--<ul class="list-group">
-													<li class="list-group-item">免费域名注册</li>
-													<li class="list-group-item">免费 Window 空间托管</li>
+													<li class="list-group-item"></li>
+													<li class="list-group-item"></li>
 												</ul>-->
 												<font size="6" style="font-weight:lighter" face="arial" color="black">${book.wechat }</font> （微信号码）
 												<br/>

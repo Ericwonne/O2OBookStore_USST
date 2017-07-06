@@ -10,6 +10,25 @@
 		<script src="http://cdn.static.runoob.com/libs/jquery/2.1.1/jquery.min.js"></script>
 		<script src="http://cdn.static.runoob.com/libs/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 		<title>用户个人信息</title>
+		<style>
+			html {
+  overflow-y: scroll;
+}
+
+:root {
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+
+:root body {
+  position: absolute;
+}
+
+body {
+  width: 100vw;
+  overflow: hidden;
+}
+		</style>
 	</head>
 
 	<body>
@@ -19,8 +38,9 @@
 
 		<div class="container">
 
-			<jsp:include page="../left.jsp" flush="true" />
-
+			<div>
+				<jsp:include page="../left.jsp" flush="true" />			
+			</div>
 			<div class="container" style="margin:30px auto">
 				<div class="panel-group" id="accordion">
 					<div class="panel panel-default">
@@ -31,19 +51,19 @@
 						</div>
 						<div id="collapseOne" class="panel-collapse collapse in" style="border-width:1px;border-style:dotted; width:inherit">
 							<div class="panel-body">
-								<ul class="list-group">
-									<li class="list-group-item"><label>商品名称：</label> ${book.name }</li>
-									<li class="list-group-item"><label>姓名：</label> ${user.name }</li>
-									<li class="list-group-item"><label>学号：</label>${user.st_num }</li>
-									<li class="list-group-item"><label>性别：</label>${user.sex }</li>
-									<li class="list-group-item"><label>年级：</label>${user.grade }</li>
-									<li class="list-group-item"><label>学院：</label>${user.school }</li>
-									<li class="list-group-item"><label>专业：</label>${user.major }</li>
-									<li class="list-group-item"><label>手机号：</label>${user.phone }</li>
-									<li class="list-group-item"><label>QQ号：</label>${user.qq }</li>
-									<li class="list-group-item"><label>微信号：</label>${user.wechat }</li>
-									<li class="list-group-item"><label>邮箱：</label>${user.email }</li>
-								</ul>
+								
+									<label>商品名称：</label> ${book.name }<br/>
+									<label>姓名：</label> ${user.name }<br/>
+									<label>学号：</label>${user.st_num }<br/>
+									<label>性别：</label>${user.sex }<br/>
+									<label>年级：</label>${user.grade }<br/>
+									<label>学院：</label>${user.school }<br/>
+									<label>专业：</label>${user.major }<br/>
+									<label>手机号：</label>${user.phone }<br/>
+									<label>QQ号：</label>${user.qq }<br/>
+									<label>微信号：</label>${user.wechat }<br/>
+									<label>邮箱：</label>${user.email }<br/>
+								
 							</div>
 							<div class="panel-body">
 
@@ -74,48 +94,12 @@
 		</div>
 
 
-
-
-
-
-		</div>
-		<!--<div class="panel-group" id="accordion">
-			<div class="panel panel-default">
-				<div class="panel-heading">
-					<h4 class="panel-title">
-						<a data-toggle="collapse" data-parent="#accordion" href="#collapseQne">
-					点击我进行展开，再次点击我进行折叠。第 1 部分
-				</a>
-					</h4>
-				</div>
-				<div id="collapseQne" class="panel-collapse collapse in">
-					<div class="panel-body">
-
-
-						<ul class="list-group">
-							<li class="list-group-item">免费域名注册</li>
-							<li class="list-group-item">免费 Window 空间托管</li>
-							<li class="list-group-item">图像的数量</li>
-							<li class="list-group-item">24*7 支持</li>
-							<li class="list-group-item">每年更新成本</li>
-						</ul>
-					</div>
-					<div class="panel-body">
-
-
-						<ul class="list-group">
-							<li class="list-group-item">免费域名注册</li>
-							<li class="list-group-item">免费 Window 空间托管</li>
-							<li class="list-group-item">图像的数量</li>
-							<li class="list-group-item">24*7 支持</li>
-							<li class="list-group-item">每年更新成本</li>
-						</ul>
-					</div>
-				</div>
-			</div>-->
-
-
+		<br/>
+		<br/>
+		<br/>
 		<jsp:include page="../footer.jsp" flush="true" />
+		<br/>
+		<br/>
 	</body>
 
 	</html>

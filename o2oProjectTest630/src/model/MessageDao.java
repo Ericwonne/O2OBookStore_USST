@@ -67,4 +67,34 @@ public class MessageDao extends BaseDao{
 		return false;
 	}
 	
+	public ArrayList<Message> getMessageBySql(String sql) {
+		// TODO Auto-generated method stub
+	
+		try(Connection conn = dataSource.getConnection();
+			PreparedStatement pstmt = conn.prepareStatement(sql)){
+			ResultSet rs = pstmt.executeQuery();
+			ArrayList<Message> messages = new ArrayList<>(); 
+			while(rs.next()){
+				Message message = new Message();
+				
+				message.setId(rs.getInt("id"));
+				message.setAccepter(rs.getInt("accepter"));
+				message.setSender(rs.getInt("sender"));
+				message.setContent(rs.getString("content"));
+				message.setRelease_time(rs.getString("release_time"));
+				message.setRecord_id(rs.getInt("record_id"));
+				message.setStatus(rs.getInt("status"));
+				message.setIf_sale(rs.getInt("if_sale"));
+				message.setIf_private(rs.getInt("if_private"));
+		
+				messages.add(message);
+			}
+			return messages;
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		return null;
+	}
+	
 }
